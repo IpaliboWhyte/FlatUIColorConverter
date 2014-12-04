@@ -21,6 +21,7 @@ textarea {
 html {
     line-height: 1.4;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 20px;
 }
 
 html,body{
@@ -87,7 +88,6 @@ fieldset {
  */
 
 textarea {
-
 }
 
 ul{
@@ -112,8 +112,8 @@ ul li{
 
 input.hexin{
     padding:10px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 50px;
+    padding-right: 20px;
     width: 220px; 
     height: 20px;
     outline: none;
@@ -126,7 +126,6 @@ input.copyout{
 button#copy{
     opacity: 1;
     position: absolute;
-    background-color: #3089CB;
     color: white;
     width: 50px;
     height: 35px;
@@ -151,7 +150,6 @@ textarea{
 
 li.selected{
     border-radius: 5px;
-    background-color: #3089CB;
     color: white;
     transition-duration: 0.2s;
 }
@@ -186,10 +184,14 @@ li.selected{
 
 
 .logo{
-   color: #3089CB;
    font-size: 25px;
    font-weight:100;
-   margin: 20px;
+   margin: 40px;
+   font-family: 'Pacifico', cursive;
+}
+
+.info{
+
 }
 
 #leftSide{
@@ -199,7 +201,7 @@ li.selected{
 
 }
 
-#rightSide{
+.rightSide{
     text-align: center;
     width: 50%;
     height: auto;
@@ -211,8 +213,25 @@ li.selected{
     border-radius: 5px;
 }
 
-.defaultBlack{
+.defaultColor{
     color: #3B3B3B;
+    transition-duration: 0.2s
+}
+
+.defaultBackground{
+    background: #3B3B3B;
+    color: white;
+    transition-duration: 0.2s;
+}
+
+#hashTag{
+    position: absolute;
+    padding: 6px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    margin-left: -135px;
+    margin-top: -36px;
 }
 
 .controlContainer{
@@ -257,6 +276,7 @@ li.selected{
     display: inline-block;
     /*background: #FF4949;*/
     cursor: pointer;
+    transition-duration: 0.8s;
 }
 
 .closeicon{

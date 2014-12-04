@@ -12,23 +12,25 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/animate.min.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
         <header>
             <div class="headerContainer">
-                <div class="logo">
+                <div class="logo defaultColor">
                     Obswi-Flat
                 </div>
             </div>
         </header>
         
         <div class="controlContainer">
-            <ul class="defaultBorder">
-                <li class="selected" language-type='Swift'>
+            <ul class="defaultBorder defaultColor">
+                <li class="selected defaultBackground" language-type='Swift'>
                     swift
                 </li>
                 <li language-type='Objective-C'>
@@ -49,27 +51,27 @@
                     <img class ="closeicon" src="img/chooseopen.png" height="10px" width="15px" style="float: right; margin-top: 5px;">
                 </div> 
 
-                <div id="colorPlate" style="display: none" class="selectColorPlate defaultBorder defaultBlack"> 
+                <div id="colorPlate" style="display: none" class="selectColorPlate defaultBorder defaultColor"> 
 
                         <ul>
                             <li color-type = 'red' color-code='#FF4949' >
                                 red
-                                <span style='width: 10px; height: 10px; background-color: #FF4949; border-radius:5px; display: inline-block; float: right; margin-left: 10px; margin-top: 3px;'>
+                                <span style='width: 10px; height: 10px; background-color: #FF4949; border-radius:5px; display: inline-block; float: right; margin-left: 10px; margin-top: 4px;'>
                                 </span>
                             </li>
                             <li color-type = 'green' color-code='#4AE285'>
                                 green
-                                <span style='width: 10px; height: 10px; background-color: #4AE285; border-radius:5px; display: inline-block; float: right; margin-left: 10px; margin-top: 3px;'>
+                                <span style='width: 10px; height: 10px; background-color: #4AE285; border-radius:5px; display: inline-block; float: right; margin-left: 10px; margin-top: 4px;'>
                                 </span>
                             </li>
                             <li color-type = 'blue' color-code='#4A90E2'>
                                 blue
-                                <span style='width: 10px; height: 10px; background-color: #4A90E2; border-radius:5px; display: inline-block; float: right; margin-left: 10px; margin-top: 3px;'>
+                                <span style='width: 10px; height: 10px; background-color: #4A90E2; border-radius:5px; display: inline-block; float: right; margin-left: 10px; margin-top: 4px;'>
                                 </span>
                             </li>
                             <li color-type = 'black' color-code='black'>
                                 black
-                                 <span style='width: 10px; height: 10px; background-color: black; border-radius:5px; display: inline-block; float: right; margin-left: 10px; margin-top: 3px;'>
+                                 <span style='width: 10px; height: 10px; background-color: black; border-radius:5px; display: inline-block; float: right; margin-left: 10px; margin-top: 4px;'>
                                 </span>                           
                             </li>                       
                         </ul>
@@ -78,35 +80,35 @@
                 
                 <div class="colorCircleContainer">
 
-                    <span id="colorCircle">
+                    <span color='' id="colorCircle">
                         
                     </span>
 
-                    <span id="colorCircle">
+                    <span color='' id="colorCircle">
                         
                     </span>
 
-                    <span id="colorCircle">
+                    <span color='' id="colorCircle">
                         
                     </span>
 
-                    <span id="colorCircle">
+                    <span color='' id="colorCircle">
                         
                     </span>
 
-                    <span id="colorCircle">
+                    <span color='' id="colorCircle">
                         
                     </span>
 
-                    <span id="colorCircle">
+                    <span color='' id="colorCircle">
                         
                     </span>
 
-                    <span id="colorCircle">
+                    <span color='' id="colorCircle">
                         
                     </span>
 
-                    <span id="colorCircle">
+                    <span color='' id="colorCircle">
                         
                     </span>
 
@@ -115,14 +117,17 @@
             </div>
         </div>
 
-        <div id='rightSide'>
+        <div class ='rightSide'>
             <div style="padding-top: 40px; display: inline-block">
-                <input type="text" class="hexin defaultBorder defaultBlack" placeholder='Enter hex value'>
+                <input type="text" class="hexin defaultBorder defaultColor" placeholder='Hex value'>
+                <span id='hashTag' class='defaultBackground'>
+                    #
+                </span>
             </div>
-<br>
+            <br>
             <div style="padding-top: 40px; display: inline-block; margin-top: 25px; position: relative">
-                <textarea id='covertedField' type="text" class="defaultBorder defaultBlack" placeholder='Swift Code'></textarea>
-                <button id="copy">
+                <textarea spellcheck="false" id='covertedField' type="text" class="defaultBorder defaultColor" placeholder='Swift Code'></textarea>
+                <button id="copy" class="defaultBackground">
                        copy
                 </button>
             </div>
