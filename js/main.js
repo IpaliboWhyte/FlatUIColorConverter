@@ -11,6 +11,21 @@ var colors = {
 }
 
 $(document).ready(function(){
+
+	var client = new ZeroClipboard( document.getElementById("copy") );
+	
+		client.on( "ready", function( readyEvent ) {
+			
+			alert( "ZeroClipboard SWF is ready!" );
+
+		client.on( "aftercopy", function( event ) {
+		// `this` === `client`
+		// `event.target` === the element that was clicked
+		event.target.style.display = "none";
+			alert("Copied text to clipboard: " + event.data["text/plain"] );
+			} );
+	} );
+
 	intialize();
 
 	$('.controlContainer ul li').click(function(){
@@ -169,13 +184,13 @@ function intialize(){
 }
 
 function disable(button){
-	$(button).prop('disabled', true);
-	$(button).css('opacity', 0.5);
+	//$(button).prop('disabled', true);
+	//$(button).css('opacity', 0.5);
 }
 
 function activate(button){
-	$(button).attr("disabled", false);
-	$(button).css('opacity', 1);
+	//$(button).attr("disabled", false);
+	//$(button).css('opacity', 1);
 }
 
 function switchLanguage(language){

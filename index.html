@@ -139,7 +139,7 @@
             <br>
             <div style="position: relative; display: inline-block; text-align: center; margin-top:50px">
                 <textarea spellcheck="false" id='covertedField' type="text" class="defaultBorder defaultColor" placeholder='Swift Code'></textarea>
-                <button id="copy" class="defaultBackground" style="position: absolute; right: 5px; top: 0;">
+                <button id="copy" data-clipboard-text="Copy Me!" class="defaultBackground" style="position: absolute; right: 5px; top: 0;">
                     copy
                 </button>
             </div>
@@ -157,7 +157,7 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.1.1.min.js"><\/script>')</script>
-
+        <script src="js/vendor/ZeroClipboard.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
