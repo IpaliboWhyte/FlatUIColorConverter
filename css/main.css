@@ -87,7 +87,7 @@ fieldset {
  */
 
 textarea {
-    resize: vertical;
+
 }
 
 ul{
@@ -103,16 +103,63 @@ ul li{
     padding-left: 25px;
     padding-right: 25px;
     margin: 5px;
-}
-
-li.selected{
+    cursor: pointer;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+input.hexin{
+    padding:10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 220px; 
+    height: 20px;
+    outline: none;
+}
+
+input.copyout{
+
+}
+
+button#copy{
+    opacity: 1;
+    position: absolute;
+    background-color: #3089CB;
+    color: white;
+    width: 50px;
+    height: 35px;
+    margin-top: -45px;
+    right: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+textarea{
+    font-size: 12px;
+    padding:20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    outline: none;
+    width: 220px;
+    height: 150px;
+    font-family: Consolas,monospace;
+}
+
+li.selected{
     border-radius: 5px;
     background-color: #3089CB;
     color: white;
+    transition-duration: 0.2s;
+}
+
+.selectColorPlate ul li{
+    display: block;
+    margin: 20px;
+    cursor: pointer;
 }
 
 /* ==========================================================================
@@ -145,6 +192,20 @@ li.selected{
    margin: 20px;
 }
 
+#leftSide{
+    width: 50%;
+    height: auto;
+    float: left;
+
+}
+
+#rightSide{
+    text-align: center;
+    width: 50%;
+    height: auto;
+    float: left;
+}
+
 .defaultBorder{
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 5px;
@@ -174,7 +235,7 @@ li.selected{
 
 .collectionContainer{
     padding-top: 40px;
-    width: 700px;
+    width: 100%;
     height: auto;
 }
 
@@ -194,13 +255,22 @@ li.selected{
     border-radius: 40px;
     background: rgba(0, 0, 0, 0.05);
     display: inline-block;
+    /*background: #FF4949;*/
+    cursor: pointer;
 }
 
+.closeicon{
+    cursor: pointer;
+}
 
+.selectColorPlate{
+    width: 210px;
+    height: auto;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 5px;
 
-
-
-
+}
 
 /* ==========================================================================
    Helper classes

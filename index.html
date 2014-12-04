@@ -25,63 +25,107 @@
                 </div>
             </div>
         </header>
-
+        
         <div class="controlContainer">
             <ul class="defaultBorder">
-                <li class="selected">
+                <li class="selected" language-type='Swift'>
                     swift
-                </li >
-                <li >
+                </li>
+                <li language-type='Objective-C'>
                     objective-c
                 </li>
-                <li >
-                    hex
+                <li language-type='Rgb'>
+                    Rgb
                 </li>
             </ul>
         </div>
 
-        <div class="collectionContainer">
-            <div class="selectBody defaultBorder">
-                Color type 
-                <img id="closeicon" src="img/chooseopen.png" height="10px" width="15px" style="float: right; margin-top: 5px;">
-            </div> 
-            
-            <div class="colorCircleContainer">
+        <div id= 'leftSide'>
+            <div class="collectionContainer">
+                <div class="selectBody defaultBorder">
+                    <span id='select-body-label'>
+                    Color type 
+                    </span>
+                    <img class ="closeicon" src="img/chooseopen.png" height="10px" width="15px" style="float: right; margin-top: 5px;">
+                </div> 
 
-                <span id="colorCircle">
-                    
-                </span>
+                <div id="colorPlate" style="display: none" class="selectColorPlate defaultBorder defaultBlack"> 
 
-                <span id="colorCircle">
+                        <ul>
+                            <li color-type = 'red' color-code='#FF4949' >
+                                red
+                                <span style='width: 10px; height: 10px; background-color: #FF4949; border-radius:5px; display: inline-block; float: right; margin-left: 10px; margin-top: 3px;'>
+                                </span>
+                            </li>
+                            <li color-type = 'green' color-code='#4AE285'>
+                                green
+                                <span style='width: 10px; height: 10px; background-color: #4AE285; border-radius:5px; display: inline-block; float: right; margin-left: 10px; margin-top: 3px;'>
+                                </span>
+                            </li>
+                            <li color-type = 'blue' color-code='#4A90E2'>
+                                blue
+                                <span style='width: 10px; height: 10px; background-color: #4A90E2; border-radius:5px; display: inline-block; float: right; margin-left: 10px; margin-top: 3px;'>
+                                </span>
+                            </li>
+                            <li color-type = 'black' color-code='black'>
+                                black
+                                 <span style='width: 10px; height: 10px; background-color: black; border-radius:5px; display: inline-block; float: right; margin-left: 10px; margin-top: 3px;'>
+                                </span>                           
+                            </li>                       
+                        </ul>
                     
-                </span>
+                </div>
+                
+                <div class="colorCircleContainer">
 
-                <span id="colorCircle">
-                    
-                </span>
+                    <span id="colorCircle">
+                        
+                    </span>
 
-                <span id="colorCircle">
-                    
-                </span>
+                    <span id="colorCircle">
+                        
+                    </span>
 
-                <span id="colorCircle">
-                    
-                </span>
+                    <span id="colorCircle">
+                        
+                    </span>
 
-                <span id="colorCircle">
-                    
-                </span>
+                    <span id="colorCircle">
+                        
+                    </span>
 
-                <span id="colorCircle">
-                    
-                </span>
+                    <span id="colorCircle">
+                        
+                    </span>
 
-                <span id="colorCircle">
-                    
-                </span>
-                            
+                    <span id="colorCircle">
+                        
+                    </span>
+
+                    <span id="colorCircle">
+                        
+                    </span>
+
+                    <span id="colorCircle">
+                        
+                    </span>
+
+                </div>
+
             </div>
+        </div>
 
+        <div id='rightSide'>
+            <div style="padding-top: 40px; display: inline-block">
+                <input type="text" class="hexin defaultBorder defaultBlack" placeholder='Enter hex value'>
+            </div>
+<br>
+            <div style="padding-top: 40px; display: inline-block; margin-top: 25px; position: relative">
+                <textarea id='covertedField' type="text" class="defaultBorder defaultBlack" placeholder='Swift Code'></textarea>
+                <button id="copy">
+                       copy
+                </button>
+            </div>
         </div>
 
         <!--[if lt IE 7]>

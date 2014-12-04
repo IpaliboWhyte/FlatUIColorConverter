@@ -525,3 +525,19 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+::-webkit-input-placeholder {
+   color: #EAEAEA;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #EAEAEA;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #EAEAEA;  
+}
+
+:-ms-input-placeholder {  
+   color: #EAEAEA;  
+}
