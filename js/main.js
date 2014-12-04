@@ -128,10 +128,10 @@ function handleResult(red, green, blue){
 	// round to 1 dp
 	switch(mode){
 		case 'Swift':
-			$('textarea').val('UIColor(red: '+(Math.round( red/255 * 1000 ) / 1000)+', green: '+(Math.round( green/255 * 1000 ) / 1000)+', blue: '+(Math.round( blue/255 * 1000 ) / 1000)+', alpha: 1.0)');
+			$('textarea').val('UIColor(red: '+(Math.round( red/255 * 1000 ) / 1000)+', green: '+(Math.round( green/255 * 1000 ) / 1000)+', blue: '+(Math.round( blue/255 * 1000 ) / 1000)+', alpha: 1)');
 			break;
 		case 'Objective-C':
-			$('textarea').val('[UIColor colorWithRed:'+(Math.round( red/255 * 1000 ) / 1000)+' green:'+(Math.round( green/255 * 1000 ) / 1000)+' blue:'+(Math.round( blue/255 * 1000 ) / 1000)+' alpha:1.0]');
+			$('textarea').val('[UIColor colorWithRed:'+(Math.round( red/255 * 1000 ) / 1000)+' green:'+(Math.round( green/255 * 1000 ) / 1000)+' blue:'+(Math.round( blue/255 * 1000 ) / 1000)+' alpha:1]');
 			break;
 		case 'Rgb':
 			$('textarea').val('rgb('+red+','+green+','+blue+')');
