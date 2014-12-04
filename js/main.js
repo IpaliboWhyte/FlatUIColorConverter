@@ -12,19 +12,18 @@ var colors = {
 
 $(document).ready(function(){
 
-$('#copy').click(function(){
-		alert('copy');
-});
-
 var client = new ZeroClipboard($('#copy'));
 
 client.on( "ready", function( readyEvent ) {
-   alert( "ZeroClipboard SWF is ready!" );
+
+client.on('mousedown',function() {
+	client.setText('hello world');
+});
 
   client.on( "aftercopy", function( event ) {
     // `this` === `client`
     // `event.target` === the element that was clicked
-    event.target.style.display = "none";
+
     alert("Copied text to clipboard: " + event.data["text/plain"] );
   } );
 
