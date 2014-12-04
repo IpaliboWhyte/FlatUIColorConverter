@@ -12,17 +12,13 @@ var colors = {
 
 $(document).ready(function(){
 
-$('#copy').click(function(){
-		alert('copy');
-});
-
 var client = new ZeroClipboard($('#copy'));
 
 client.on( "ready", function( readyEvent ) {
 
 	client.on( "copy", function (event) {
 		var clipboard = event.clipboardData;
-		clipboard.setData( "text/plain", "Copy merr!" );
+		clipboard.setData( "text/plain", $('textarea#covertedField').val());
 	});
 
   client.on( "aftercopy", function( event ) {
