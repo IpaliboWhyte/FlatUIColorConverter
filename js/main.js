@@ -75,11 +75,7 @@ $(document).ready(function(){
 
 		$(this).addClass('animated bounceIn');
 
-		$('.rightSide').addClass('animated flash');
-
-		$('.rightSide').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-			$('.rightSide').removeClass('animated flash');
-		});
+		$('.rightSide').addClass('animated pulse');
 
 		$(this).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 			$(this).removeClass('animated bounceIn');
@@ -152,7 +148,7 @@ function intialize(){
 		$( "body" ).animate({
 		opacity: 1,
 		}, 1500, function(){
-			
+
 			$('.colorCircleContainer').css('visibility', 'visible');
 
 			var bounce = new Bounce();
@@ -188,6 +184,8 @@ function switchLanguage(language){
 
 function closeColorPlate(){
 	plateDisplayed = false;
+
+	
 	$('#colorPlate').animate({
     display: 'none',
 	height: "toggle"
@@ -200,7 +198,7 @@ function closeColorPlate(){
 	  from: 180,
 	  to: 360,
 	  bounces: 6,
-	  duration: 1000,
+	  duration: 800,
       stiffness: 4
 	});
 
@@ -213,7 +211,6 @@ function openColorPlate(){
 	plateDisplayed = true;
 
 	$('#colorPlate').animate({
-
     height: "toggle"
 	}, 200, function() {
 
@@ -224,11 +221,12 @@ function openColorPlate(){
 	  from: 0,
 	  to: 180,
 	  bounces: 6,
-	  duration: 1000,
+	  duration: 800,
       stiffness: 4
 	});
 
 	bounce.applyTo($(".closeicon")).then(function() { 
 	console.log("Animation Complete"); 
 	});
+
 }

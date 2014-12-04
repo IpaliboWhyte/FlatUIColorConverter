@@ -91,6 +91,11 @@ fieldset {
  * Allow only vertical resizing of textareas.
  */
 
+a,
+a:visited {
+    text-decoration: none;
+}
+
 textarea {
 }
 
@@ -300,7 +305,8 @@ li.selected{
     background-color: white;
     margin: 0 auto;
     margin-top: 5px;
-
+    overflow: hidden;
+    display: none;
 }
 
 /* ==========================================================================
@@ -436,7 +442,7 @@ li.selected{
 
     a,
     a:visited {
-        text-decoration: underline;
+        text-decoration: none;
     }
 
     a[href]:after {
