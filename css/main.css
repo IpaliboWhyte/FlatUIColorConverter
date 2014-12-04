@@ -32,6 +32,10 @@ html,body{
     font-size: 13px;
 }
 
+body{
+    opacity: 0;
+}
+
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
@@ -156,8 +160,7 @@ li.selected{
 
 .selectColorPlate ul li{
     display: block;
-    margin: 20px;
-    cursor: pointer;
+    margin: 15px;
 }
 
 /* ==========================================================================
@@ -186,12 +189,18 @@ li.selected{
 .logo{
    font-size: 25px;
    font-weight:100;
-   margin: 40px;
+   margin: 35px;
    font-family: 'Pacifico', cursive;
+   display: inline-block;
+   visibility: hidden;
 }
 
 .info{
-
+    text-align: center;
+    float: right;
+    margin-top: 35px;
+    margin-right: 35px;
+    font-size: 10px;
 }
 
 #leftSide{
@@ -263,6 +272,7 @@ li.selected{
     width: auto;
     height: auto;
     padding: 40px;
+    visibility: hidden;
 }
 
 #colorCircle{
@@ -286,6 +296,7 @@ li.selected{
 .selectColorPlate{
     width: 210px;
     height: auto;
+    text-align: center;
     background-color: white;
     margin: 0 auto;
     margin-top: 5px;

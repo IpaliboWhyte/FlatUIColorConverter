@@ -3,8 +3,11 @@ var isTesting = true;
 var mode = 'Swift';
 
 var colors = {
-	'red' : ['D31900', 'F3210C', 'CE0A31', 'FA023C', 'D2505A', '990100', 'B90504', 'E02130'],
+	'red' : ['D31900', 'F3210C', 'CE0A31', 'FA023C', 'D2505A', '990100', 'CC2649', 'E02130'],
 	'green' : ['A8DBA8', '3B8686', 'CBE86B', '3FB8AF', 'BEF202', '519548', 'B3CC57', '379F7A'],
+	'blue' : ['69D2E7', '00DFFC', '1BB0CE', '26ADE4', '008C9E', '00B4FF', '046D8B', '4F8699'],
+	'black' : ['2A363B', '413D3D', '333333', '1A1C27', '262525', '2B2823', '373A44', '040004'],
+	'yellow' : ['ECBE13', 'F4DD51', 'FACA66', 'FFFF00', 'FFC52C', 'F4F328', 'F9D423', 'F7F972'],
 }
 
 $(document).ready(function(){
@@ -52,16 +55,34 @@ $(document).ready(function(){
 			case 'green':
 				fillColorPlates(colors.green);
 				break;
+			case 'blue':
+				fillColorPlates(colors.blue);
+				break;
+			case 'black':
+				fillColorPlates(colors.black);
+				break;
+			case 'yellow':
+				fillColorPlates(colors.yellow);
+				break;
 		}
 		
 	});
 
 	$('.colorCircleContainer').children().click(function(){
 		$('.hexin').val($(this).attr('color'));
+
 		convertTo($(this).attr('color'));
+
+		$(this).addClass('animated bounceIn');
+
 		$('.rightSide').addClass('animated flash');
+
 		$('.rightSide').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 			$('.rightSide').removeClass('animated flash');
+		});
+
+		$(this).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+			$(this).removeClass('animated bounceIn');
 		});
 	});
 
@@ -70,8 +91,10 @@ $(document).ready(function(){
 function fillColorPlates(colors){
 	$('.colorCircleContainer').children().each(function(index){
 		$(this).attr('color', colors[index]);
-		$(this).css('background-color', '#'+colors[index]);
-	});
+
+		var t = $(this);
+
+		setTimeout(function(){t.css('background-color', '#'+colors[index])},(index+1) * 100);});
 }
 
 function validate(hex){
@@ -125,6 +148,28 @@ function handleResult(red, green, blue){
 function intialize(){
 	switchLanguage('Swift');
 	disable($('button#copy'));
+
+		$( "body" ).animate({
+		opacity: 1,
+		}, 1500, function(){
+			
+			$('.colorCircleContainer').css('visibility', 'visible');
+
+			var bounce = new Bounce();
+			bounce.translate({
+				from: { x: 0, y: 2000 },
+				to: { x: 0, y: 0 },
+				bounces: 3,
+				duration: 1000,
+				stiffness: 4
+			});
+
+			bounce.applyTo($(".colorCircleContainer")).then(function() { 
+				$('.logo').css('visibility', 'visible');
+				$('.logo').addClass('animated bounceInLeft');
+			});
+		});
+
 }
 
 function disable(button){
@@ -144,38 +189,46 @@ function switchLanguage(language){
 function closeColorPlate(){
 	plateDisplayed = false;
 	$('#colorPlate').animate({
-    display: 'block',
+    display: 'none',
 	height: "toggle"
 	}, 200, function() {
 	   
 	});
 
-	$('.closeicon').animate({  borderSpacing: 0 }, {
-	    step: function(now,fx) {
-	      $(this).css('transform','rotate('+now+'deg)');  
-	    },
-	    duration:200
-	},'linear');
+	var bounce = new Bounce();
+	bounce.rotate({
+	  from: 180,
+	  to: 360,
+	  bounces: 6,
+	  duration: 1000,
+      stiffness: 4
+	});
 
-	$('.closeicon').removeClass('rotate');
+	bounce.applyTo($(".closeicon")).then(function() { 
+	console.log("Animation Complete"); 
+	});
 }
 
 function openColorPlate(){
 	plateDisplayed = true;
+
 	$('#colorPlate').animate({
 
-    display: 'block',
     height: "toggle"
 	}, 200, function() {
 
 	});
 
-	$('.closeicon').animate({  borderSpacing: -90 }, {
-	    step: function(now,fx) {
-	      $(this).css('transform','rotate('+now+'deg)');  
-	    },
-	    duration:200
-	},'linear');
+	var bounce = new Bounce();
+	bounce.rotate({
+	  from: 0,
+	  to: 180,
+	  bounces: 6,
+	  duration: 1000,
+      stiffness: 4
+	});
 
-	$('.closeicon').addClass('rotate');	
+	bounce.applyTo($(".closeicon")).then(function() { 
+	console.log("Animation Complete"); 
+	});
 }
