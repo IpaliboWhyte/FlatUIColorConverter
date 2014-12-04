@@ -14,19 +14,14 @@ $(document).ready(function(){
 
 var client = new ZeroClipboard($('#copy'));
 
-client.on( "ready", function( readyEvent ) {
-
-client.on('mousedown',function() {
-	client.setText('hello world');
+clip.on('mousedown',function() {
+	clip.setText(document.getElementById('covertedField').value);
 });
-
-  client.on( "aftercopy", function( event ) {
-    // `this` === `client`
-    // `event.target` === the element that was clicked
-
-    alert("Copied text to clipboard: " + event.data["text/plain"] );
-  } );
-
+clip.addEventListener('complete',function(client,text) {
+	alert('copied: ' + text);
+});
+//glue it to the button
+clip.glue('copy');
 } );
 
 	intialize();
