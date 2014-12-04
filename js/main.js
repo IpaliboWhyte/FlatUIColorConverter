@@ -12,19 +12,20 @@ var colors = {
 
 $(document).ready(function(){
 
-	//set path
-	ZeroClipboard.setMoviePath('ZeroClipboard.swf');
-	//create client
-	var clip = new ZeroClipboard.Client();
-	//event
-	clip.addEventListener('mousedown',function() {
-		clip.setText(document.getElementById('covertedField').value);
-	});
-	clip.addEventListener('complete',function(client,text) {
-		alert('copied: ' + text);
-	});
-	//glue it to the button
-	clip.glue('copy');
+// main.js
+var client = new ZeroClipboard( document.getElementById("copy") );
+
+client.on( "ready", function( readyEvent ) {
+  // alert( "ZeroClipboard SWF is ready!" );
+
+  client.on( "aftercopy", function( event ) {
+    // `this` === `client`
+    // `event.target` === the element that was clicked
+    event.target.style.display = "none";
+    alert("Copied text to clipboard: " + event.data["text/plain"] );
+  } );
+  
+} );
 
 	intialize();
 
