@@ -19,7 +19,7 @@ $('#copy').click(function(){
 var client = new ZeroClipboard( document.getElementById("copy") );
 
 client.on( "ready", function( readyEvent ) {
-  // alert( "ZeroClipboard SWF is ready!" );
+   alert( "ZeroClipboard SWF is ready!" );
 
   client.on( "aftercopy", function( event ) {
     // `this` === `client`
