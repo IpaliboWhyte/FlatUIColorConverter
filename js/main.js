@@ -20,6 +20,11 @@ var client = new ZeroClipboard($('#copy'));
 
 client.on( "ready", function( readyEvent ) {
 
+	client.on( "copy", function (event) {
+		var clipboard = event.clipboardData;
+		clipboard.setData( "text/plain", "Copy merr!" );
+	});
+
   client.on( "aftercopy", function( event ) {
     // `this` === `client`
     // `event.target` === the element that was clicked
