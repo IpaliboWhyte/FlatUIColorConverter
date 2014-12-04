@@ -14,15 +14,14 @@ $(document).ready(function(){
 
 var client = new ZeroClipboard($('#copy'));
 
-clip.on('mousedown',function() {
-	clip.setText(document.getElementById('covertedField').value);
-});
-clip.addEventListener('complete',function(client,text) {
-	alert('copied: ' + text);
-});
-//glue it to the button
-clip.glue('copy');
-} );
+	client.on('mousedown',function() {
+		client.setText(document.getElementById('covertedField').value);
+	});
+	client.on('complete',function(client,text) {
+		alert('copied: ' + text);
+	});
+	//glue it to the button
+	//client.glue('copy');
 
 	intialize();
 
