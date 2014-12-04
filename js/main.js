@@ -12,9 +12,9 @@ var colors = {
 
 $(document).ready(function(){
 
-$('#copy').click(function({
-	alert('copy')
-}));
+$('#copy').click(function(){
+		alert('copy');
+});
 
 var client = new ZeroClipboard( document.getElementById("copy") );
 
