@@ -147,7 +147,7 @@ function intialize(){
 
 		$( "body" ).animate({
 		opacity: 1,
-		}, 1500, function(){
+		}, 800, function(){
 
 			$('.colorCircleContainer').css('visibility', 'visible');
 
@@ -156,7 +156,7 @@ function intialize(){
 				from: { x: 0, y: 2000 },
 				to: { x: 0, y: 0 },
 				bounces: 3,
-				duration: 1000,
+				duration: 800,
 				stiffness: 4
 			});
 
