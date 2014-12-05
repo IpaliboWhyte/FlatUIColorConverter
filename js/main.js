@@ -187,6 +187,10 @@ function intialize(){
 			});
 		});
 
+	$(".hexin").on("change keyup paste", function(){
+	    convertTo($(this).val());
+	});
+
 }
 
 function disable(button){
