@@ -8,6 +8,7 @@ var colors = {
 	'blue' : ['69D2E7', '00DFFC', '1BB0CE', '26ADE4', '008C9E', '00B4FF', '046D8B', '4F8699'],
 	'black' : ['2A363B', '413D3D', '333333', '1A1C27', '262525', '2B2823', '373A44', '040004'],
 	'yellow' : ['ECBE13', 'F4DD51', 'FACA66', 'FFFF00', 'FFC52C', 'F4F328', 'F9D423', 'F7F972'],
+	'special' : ['012340', '015367', '28C07B', 'FCE913', 'FA5500', 'D7F8FD', '647086', 'EA808E'],
 }
 
 $(document).ready(function(){
@@ -80,6 +81,9 @@ client.on( "ready", function( readyEvent ) {
 				break;
 			case 'yellow':
 				fillColorPlates(colors.yellow);
+				break;
+			case 'special':
+				fillColorPlates(colors.special);
 				break;
 		}
 		
