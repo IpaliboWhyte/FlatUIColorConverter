@@ -186,13 +186,13 @@ function intialize(){
 }
 
 function disable(button){
-	//$(button).prop('disabled', true);
-	//$(button).css('opacity', 0.5);
+	$(button).prop('disabled', true);
+	$(button).css('opacity', 0.5);
 }
 
 function activate(button){
-	//$(button).attr("disabled", false);
-	//$(button).css('opacity', 1);
+	$(button).attr("disabled", false);
+	$(button).css('opacity', 1);
 }
 
 function switchLanguage(language){
