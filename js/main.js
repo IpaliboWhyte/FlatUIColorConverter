@@ -131,7 +131,7 @@ function convertTo(hex){
 	green_val = parseInt(green_val, 16);
 	blue_val = parseInt(blue_val, 16);
 
-	console.log(red_val+ ',' +green_val+ ',' +blue_val);
+	//console.log(red_val+ ',' +green_val+ ',' +blue_val);
 
 	handleResult(red_val, green_val, blue_val);
 
@@ -220,7 +220,7 @@ function closeColorPlate(){
 	});
 
 	bounce.applyTo($(".closeicon")).then(function() { 
-	console.log("Animation Complete"); 
+	//console.log("Animation Complete"); 
 	});
 }
 
@@ -243,7 +243,7 @@ function openColorPlate(){
 	});
 
 	bounce.applyTo($(".closeicon")).then(function() { 
-	console.log("Animation Complete"); 
+	//console.log("Animation Complete"); 
 	});
 
 }
