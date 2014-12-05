@@ -96,6 +96,7 @@ a:visited {
     text-decoration: none;
 }
 
+
 textarea {
 }
 
@@ -209,11 +210,23 @@ li.selected{
     font-size: 10px;
 }
 
+footer.info{
+    margin-top: 250px;
+    position:relative;
+    bottom:0;
+    width:auto;
+    height:auto;   /* Height of the footer */
+}
+
+.container{
+    width: auto;
+    height: auto;
+}
+
 #leftSide{
     width: 50%;
     height: auto;
     float: left;
-
 }
 
 .rightSide{
