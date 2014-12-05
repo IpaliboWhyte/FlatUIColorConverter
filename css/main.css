@@ -274,10 +274,12 @@ li.selected{
 }
 
 .colorCircleContainer{
+    display: inline-block;
+    text-align: center;
     margin: 0 auto;
     width: auto;
     height: auto;
-    padding: 40px;
+    padding: 50px;
     visibility: hidden;
 }
 
