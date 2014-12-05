@@ -11,5 +11,5 @@ How to use
 ![alt tag](https://github.com/IpaliboWhyte/FlatUIColorConverter/blob/gh-pages/img/howto1.png)
 3. Click on your desired circle color 
 4. Select your desired format
-![alt tag](https://github.com/IpaliboWhyte/FlatUIColorConverter/blob/gh-pages/img/howto2.png)
+![alt tag](https://github.com/IpaliboWhyte/FlatUIColorConverter/blob/gh-pages/img/howto3.png)
 5. Copy the code with the copy button. Woop, Done !!!
