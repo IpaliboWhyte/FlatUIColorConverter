@@ -12,3 +12,4 @@ How to use
 3. Click on your desired color type shade
 4. Select your desired format
 ![alt tag](https://github.com/IpaliboWhyte/FlatUIColorConverter/blob/gh-pages/img/howto2.png)
+5. Copy the code with the copy button. Woop, Done !!!
