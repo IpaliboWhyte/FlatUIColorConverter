@@ -21,7 +21,7 @@ client.on( "ready", function( readyEvent ) {
 		var clipboard = event.clipboardData;
 		clipboard.setData( "text/plain", $('textarea#covertedField').val());
 		$('#copy').addClass('animated tada');
-		$('#copy').val('copied');
+		$('#copy').text('copied');
 
 		setTimeout(function(){ 
 			$('#copy').text('Copy');
