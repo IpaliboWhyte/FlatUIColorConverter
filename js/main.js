@@ -13,6 +13,7 @@ var colors = {
 
 $(document).ready(function(){
 
+var copiedActionTimeout;
 var client = new ZeroClipboard($('#copy'));
 
 client.on( "ready", function( readyEvent ) {
@@ -20,12 +21,16 @@ client.on( "ready", function( readyEvent ) {
 	client.on( "copy", function (event) {
 		var clipboard = event.clipboardData;
 		clipboard.setData( "text/plain", $('textarea#covertedField').val());
+		
+		clearTimeout(copiedActionTimeout);
+		
 		$('#copy').addClass('animated tada');
 		$('button#copy').text('copied !');
 
-		setTimeout(function(){ 
-			$('#copy').text('Copy');
+		copiedActionTimeout = setTimeout(function(){ 
+			$('#copy').text('copy');
 		}, 2000);
+
 	});
 
   client.on( "aftercopy", function( event ) {
