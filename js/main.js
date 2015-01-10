@@ -24,7 +24,7 @@ client.on( "ready", function( readyEvent ) {
 		$('#copy').val('copied');
 
 		setTimeout(function(){ 
-			$('#copy').val('Copy');
+			$('#copy').text('Copy');
 		}, 2000);
 	});
 
