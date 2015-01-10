@@ -170,6 +170,14 @@ li.selected{
     margin: 15px;
 }
 
+input[type=color] {
+   height: 50px;
+   width: 50px;
+   border: 0px;
+   padding: 0px;
+   margin: 0px;
+}
+
 /* ==========================================================================
    Browse Happy prompt
    ========================================================================== */

@@ -20,6 +20,12 @@ client.on( "ready", function( readyEvent ) {
 	client.on( "copy", function (event) {
 		var clipboard = event.clipboardData;
 		clipboard.setData( "text/plain", $('textarea#covertedField').val());
+		$('#copy').addClass('animated tada');
+		$('#copy').val('copied');
+
+		setTimeout(function(){ 
+			$('#copy').val('Copy');
+		}, 2000);
 	});
 
   client.on( "aftercopy", function( event ) {
