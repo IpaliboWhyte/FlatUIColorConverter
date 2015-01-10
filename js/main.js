@@ -23,8 +23,8 @@ client.on( "ready", function( readyEvent ) {
 		clipboard.setData( "text/plain", $('textarea#covertedField').val());
 		
 		clearTimeout(copiedActionTimeout);
-		
-		$('#copy').addClass('animated tada');
+
+		$('#copy').addClass('animated bounceIn');
 		$('button#copy').text('copied !');
 
 		copiedActionTimeout = setTimeout(function(){ 
